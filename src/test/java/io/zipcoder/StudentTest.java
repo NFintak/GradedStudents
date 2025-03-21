@@ -105,12 +105,23 @@ public class StudentTest {
 
     @Test
     public void test1getAverageExamScore() {
-
+        student1.addExamScores(100);
+        student1.addExamScores(125);
+        student1.addExamScores(75);
+        Double expected = 100.0;
+        Double actual = student1.getAverageExamScore();
+        assertEquals(expected, actual);
     }
 
     @Test
     public void test2getAverageExamScore() {
-
+        student1.addExamScores(93.6);
+        student1.addExamScores(82.3);
+        student1.addExamScores(91.7);
+        student1.addExamScores(63.5);
+        Double expected = 82.775;
+        Double actual = student1.getAverageExamScore();
+        assertEquals(expected, actual, 0.001);
     }
 
 }
