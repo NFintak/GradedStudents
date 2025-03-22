@@ -57,4 +57,13 @@ public class Student {
         return sumOfExams / this.examScores.size();
     }
 
+    @Override
+    public String toString() {
+        String studentProfile = String.format("Student Name: %s %s\n> Average Score: %.0f\n> %s", this.firstName, this.lastName,
+                this.getAverageExamScore(), this.getExamScores());
+        //use stringbuilder? String.format? smt to think on for later
+        return studentProfile;
+    }
+
+
 }

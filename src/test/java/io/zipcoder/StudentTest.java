@@ -124,4 +124,15 @@ public class StudentTest {
         assertEquals(expected, actual, 0.001);
     }
 
+    @Test
+    public void test1toStringOverride() {
+        student1.addExamScores(94);
+        student1.addExamScores(85);
+        student1.addExamScores(97);
+        String expected = "Student Name: Bartholomew Allen\n> Average Score: 92" +
+                "\n> Exam Scores:\n\tExam 1 -> 94\n\tExam 2 -> 85\n\tExam 3 -> 97\n";
+        String actual = student1.toString();
+        assertEquals(expected, actual);
+    }
+
 }
